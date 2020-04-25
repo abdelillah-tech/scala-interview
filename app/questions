@@ -1,12 +1,41 @@
 
 1) Explain REST and RESTful
+REST is an architectural pattern for creating web services, that exploits the existing technology and protocols of the Web.
+RESTful service is one that implements REST pattern and it is used to refer to web services implementing such an architecture.
 
 2) Explain the architectural style for the creation of a web API (client server communication, formatting language, etc.)
+There are three components in the architectural style for the creation a web API. The central component is the model, 
+it manages the data, logic and rules of the application the updates are sent to the view component that manages data 
+representation, this component describes what the user sees, the inputs that the user puts in are converted by the 
+controller component to commands for the model or view.
+
+
 
 3) Explain HTTP requests types when used with RESTful web (GET, PUT, POST, etc.)
+GET : is used to retrieve information from the given server using a given URI
+POST : is used to send data to the server
+PUT : replaces all current representations of the target resource with the uploaded content.
+DELETE : removes all current representations of the target resource given by a URI.
+HEAD : same as GET, but transfers the status line and header section only.
+CONNECT : establishes a tunnel to the server identified by a given URI.
+OPTION : describes the communication options for the target resource.
+TRACE : performs a message loop-back test along the path to the target resource.
 
 4) Explain the difference between stateless and stateful protocol. Which type of protocol is HTTP ?
+stateless protocol : Stateless Protocols are the type of network protocols in which Client send request to the server 
+                     and server response back according to current state. It does not require the server to retain 
+                     session information or a status about each communicating partner for multiple request.
+stateful protocol : In Stateful Protocol If client send a request to the server then it expects some kind of response,
+                    if it does not get any response then it resend the request. FTP (File Transfer Protocol), 
+                    Telnet are the example of Stateful Protocol.
+HTTP is stateless protocol
 
 5) Explain the difference between a GET and a POST (like how are sent the parameters)
+GET : carries request parameter appended in URL string
+POST : carries request parameter in message body
 
 6) You can’t work out how to solve a coding problem. What do you do to find the answer?
+I read the code multiple times and make sure i understand the problem and try to explain it outloud,
+i then break it into sub-problems and make a plan to solve each one. For each sub-problem that i can't solve
+i go through my code and try to figure out where the mistake is( debugging ). After solving each sub-problem 
+i connect the solutions.
