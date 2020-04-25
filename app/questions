@@ -38,4 +38,5 @@ POST : carries request parameter in message body
 I read the code multiple times and make sure i understand the problem and try to explain it outloud,
 i then break it into sub-problems and make a plan to solve each one. For each sub-problem that i can't solve
 i go through my code and try to figure out where the mistake is( debugging ). After solving each sub-problem 
-i connect the solutions.
+i connect the solutions. if this doesn't work i look for solutions for problems that are similar of mine on web.
+And if that doen't work i ask people of my network for solutions.
