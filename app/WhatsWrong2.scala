@@ -19,7 +19,7 @@ object CEODao {
 object EnterpriseDao {
   val enterprises = List(
     Enterprise("1", "Google", "1"),
-    Enterprise("2", "Facebook", "2")
+    Enterprise("2", "Facebook", "2")  //the first thing i see is the values in ceo.id column they should be swaped
   )
 
   def byId(id: String): Future[Option[Enterprise]] = Future { enterprises.find(_.id == id) }
@@ -31,8 +31,8 @@ object WhatsWrong2 {
   //Review this code. What could be done better ? How would you do it ?
   def getCEOAndEnterprise(ceo_id: Option[String]): Future[(Option[CEO], Option[Enterprise])] = {
     for {
-      ceo <- CEODao.byId(ceo_id.get)
-      enterprise <- EnterpriseDao.byCEOId(ceo_id.get)
+      ceo <- CEODao.byId(ceo_id.get)                      // if we call sequentially several external resources it can turn out into a problem
+      enterprise <- EnterpriseDao.byCEOId(ceo_id.get)     // but i'm not sur of what the replacement could be
     } yield {
       (ceo, enterprise)
     }
